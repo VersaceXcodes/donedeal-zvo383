@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462489017,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_ListingWizardStep2",
+      "version": "latest"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_ListingWizardStep2.tsx",
+      "type": "text",
+      "size": 13428,
+      "dependencies": false
+    }
+  ]
+}

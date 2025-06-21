@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462014784,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_ResetPassword",
+      "version": "latest"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_ResetPassword.tsx",
+      "type": "text",
+      "size": 8177,
+      "dependencies": false
+    }
+  ]
+}

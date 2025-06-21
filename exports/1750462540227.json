@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462540227,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_DeleteConfirmationModal",
+      "version": "1750461610816"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_DeleteConfirmationModal.tsx",
+      "type": "text",
+      "size": 3739,
+      "dependencies": false
+    }
+  ]
+}

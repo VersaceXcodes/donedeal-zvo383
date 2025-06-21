@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462077850,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_EmailVerificationNotice",
+      "version": "1750461610767"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_EmailVerificationNotice.tsx",
+      "type": "text",
+      "size": 3807,
+      "dependencies": false
+    }
+  ]
+}

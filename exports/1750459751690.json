@@ -1,0 +1,15 @@
+{
+  "timestamp": 1750459751690,
+  "operation": {
+    "id": "backend:specifications:asyncapi"
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/backend/asyncapi.yaml",
+      "type": "text",
+      "size": 3,
+      "dependencies": false
+    }
+  ]
+}
