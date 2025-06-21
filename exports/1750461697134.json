@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750461697134,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_Landing",
+      "version": "1750461610728"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_Landing.tsx",
+      "type": "text",
+      "size": 11950,
+      "dependencies": false
+    }
+  ]
+}

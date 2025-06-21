@@ -1,0 +1,21 @@
+{
+  "timestamp": 1750460144390,
+  "operation": {
+    "id": "settings:config:package"
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/backend/package.json",
+      "type": "text",
+      "size": 834,
+      "dependencies": true
+    },
+    {
+      "path": "../../apps/donedeal/backend/.env",
+      "type": "text",
+      "size": 584,
+      "dependencies": false
+    }
+  ]
+}

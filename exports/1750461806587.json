@@ -1,0 +1,15 @@
+{
+  "timestamp": 1750461806587,
+  "operation": {
+    "id": "settings:config:package"
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/package.json",
+      "type": "text",
+      "size": 2979,
+      "dependencies": true
+    }
+  ]
+}

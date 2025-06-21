@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462766867,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_TransactionsList",
+      "version": "1750461610839"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_TransactionsList.tsx",
+      "type": "text",
+      "size": 9093,
+      "dependencies": false
+    }
+  ]
+}

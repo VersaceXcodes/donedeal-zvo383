@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750461597931,
+  "operation": {
+    "id": "webapp:react:root",
+    "refs": {
+      "id": "app",
+      "version": "1750461460086"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/App.tsx",
+      "type": "text",
+      "size": 14362,
+      "dependencies": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462972993,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_AccountSettings",
+      "version": "latest"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_AccountSettings.tsx",
+      "type": "text",
+      "size": 18829,
+      "dependencies": false
+    }
+  ]
+}

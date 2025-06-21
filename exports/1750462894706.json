@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462894706,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_MessageThread",
+      "version": "1750461610847"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_MessageThread.tsx",
+      "type": "text",
+      "size": 10262,
+      "dependencies": false
+    }
+  ]
+}

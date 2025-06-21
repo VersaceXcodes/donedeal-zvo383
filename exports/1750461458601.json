@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750461458601,
+  "operation": {
+    "id": "webapp:react:store",
+    "refs": {
+      "id": "redux",
+      "version": "1750461352430"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/store/main.tsx",
+      "type": "text",
+      "size": 7212,
+      "dependencies": false
+    }
+  ]
+}

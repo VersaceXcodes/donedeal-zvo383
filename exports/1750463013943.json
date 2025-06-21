@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750463013943,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_MakeOfferModal",
+      "version": "latest"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_MakeOfferModal.tsx",
+      "type": "text",
+      "size": 6678,
+      "dependencies": false
+    }
+  ]
+}

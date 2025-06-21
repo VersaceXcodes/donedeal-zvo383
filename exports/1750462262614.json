@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462262614,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_CategoryBrowse",
+      "version": "latest"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_CategoryBrowse.tsx",
+      "type": "text",
+      "size": 11882,
+      "dependencies": false
+    }
+  ]
+}

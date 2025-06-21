@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750461807490,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_Login",
+      "version": "1750461610741"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_Login.tsx",
+      "type": "text",
+      "size": 9772,
+      "dependencies": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "timestamp": 1750462700326,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_ProfileFavorites",
+      "version": "latest"
+    }
+  },
+  "projectId": "donedeal",
+  "files": [
+    {
+      "path": "../../apps/donedeal/vitereact/src/components/views/UV_ProfileFavorites.tsx",
+      "type": "text",
+      "size": 7495,
+      "dependencies": false
+    }
+  ]
+}
