@@ -71,7 +71,8 @@
     "zod": "^3.23.8",
     "zustand": "*",
     "@tanstack/react-query": "*",
-    "react-google-recaptcha": "*"
+    "react-google-recaptcha": "*",
+    "react-error-boundary": "^4.0.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
