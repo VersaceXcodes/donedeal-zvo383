@@ -2,6 +2,7 @@ import React, {
   useState,
   useRef,
   useEffect,
+  useCallback,
   FormEvent,
   ClipboardEvent,
   KeyboardEvent
@@ -21,7 +22,7 @@ interface LocationState {
 const UV_OTPVerification: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const addToast = useAppStore(state => state.add_toast);
+  const addToast = useAppStore(state => state.addToast);
   const token = useAppStore(state => state.auth.token);
 
   // Extract context & phone from router state
@@ -31,25 +32,31 @@ const UV_OTPVerification: React.FC = () => {
   const [otp, setOtp] = useState<string[]>(['', '', '', '', '', '']);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(60);
+  const [error, setError] = useState<string>('');
 
   // Refs for inputs & timers
   const inputsRef = useRef<Array<HTMLInputElement | null>>([]);
-  const timersRef = useRef<Array<NodeJS.Timeout>>([]);
+  const timerRef = useRef<number | null>(null);
 
   // Start (or restart) 60s cooldown
-  const startCooldown = () => {
+  const startCooldown = useCallback(() => {
+    if (timerRef.current !== null) {
+      clearInterval(timerRef.current);
+    }
     setSecondsLeft(60);
-    const id = setInterval(() => {
+    const id = window.setInterval(() => {
       setSecondsLeft(prev => {
         if (prev <= 1) {
-          clearInterval(id);
+          if (timerRef.current !== null) {
+            clearInterval(timerRef.current);
+          }
           return 0;
         }
         return prev - 1;
       });
     }, 1000);
-    timersRef.current.push(id);
-  };
+    timerRef.current = id;
+  }, []);
 
   // On mount, kick off initial cooldown; redirect if no phone
   useEffect(() => {
@@ -59,9 +66,11 @@ const UV_OTPVerification: React.FC = () => {
     }
     startCooldown();
     return () => {
-      timersRef.current.forEach(clearInterval);
+      if (timerRef.current !== null) {
+        clearInterval(timerRef.current);
+      }
     };
-  }, []);
+  }, [phone, context, navigate, startCooldown]);
 
   // Check if all OTP digits are filled
   const isOtpComplete = otp.every(d => d !== '');
@@ -96,6 +105,7 @@ const UV_OTPVerification: React.FC = () => {
         const msg =
           err.response?.data?.message ||
           'Invalid OTP. Please try again.';
+        setError(msg);
         addToast({ id: `${Date.now()}`, type: 'error', message: msg });
       }
     }
@@ -121,11 +131,8 @@ const UV_OTPVerification: React.FC = () => {
     },
     {
       onSuccess: () => {
-        addToast({
-          id: `${Date.now()}`,
-          type: 'success',
-          message: 'OTP resent successfully.'
-        });
+        const msg = 'OTP resent successfully.';
+        addToast({ id: `${Date.now()}`, type: 'success', message: msg });
         startCooldown();
       },
       onError: (err: any) => {
@@ -139,6 +146,7 @@ const UV_OTPVerification: React.FC = () => {
 
   // Handlers
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, idx: number) => {
+    setError('');
     const val = e.target.value.replace(/\D/g, ''); // digits only
     if (!val) {
       setOtp(prev => {
@@ -185,6 +193,7 @@ const UV_OTPVerification: React.FC = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!isOtpComplete) return;
+    setError('');
     setIsSubmitting(true);
     verifyMutation.mutate();
   };
@@ -205,7 +214,7 @@ const UV_OTPVerification: React.FC = () => {
             : 'reset your password'}
           .
         </p>
-
+        {error && <p className="text-red-600 text-sm mb-4">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="flex justify-between space-x-2">
             {otp.map((digit, idx) => (
@@ -219,6 +228,7 @@ const UV_OTPVerification: React.FC = () => {
                 onKeyDown={e => handleKeyDown(e, idx)}
                 onPaste={handlePaste}
                 ref={el => (inputsRef.current[idx] = el)}
+                aria-label={`OTP digit ${idx+1}`}
                 className="w-12 h-12 text-center border border-gray-300 rounded-md text-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             ))}

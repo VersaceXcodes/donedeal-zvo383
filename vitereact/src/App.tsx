@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
-import shallow from 'zustand/shallow';
+import { shallow } from 'zustand/shallow';
 import { useAppStore } from '@/store/main';
 
 /* Global Views */
